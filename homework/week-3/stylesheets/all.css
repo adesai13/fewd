@@ -78,6 +78,11 @@ main img {
 }
 
 
+.form label {
+  padding: 2px;
+}
+
+
 .text-selection {
   flex: 1;
 }
