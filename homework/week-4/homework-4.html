@@ -1,0 +1,71 @@
+<!-- Pythagorean Theorem -->
+
+<script type="text/javascript">
+
+var a = prompt("What is a?");
+
+var b = prompt("What is b?");
+
+parseFloat(a); parseFloat(b)
+
+function longestSide(a,b) {
+  var result = Math.sqrt((a * a) + (b * b))
+  return result;
+}
+
+var c = longestSide(a,b).toFixed(2);
+
+alert("The longest side is: " + c)
+
+</script>
+
+<!-- Radius of a circle -->
+
+<script type="text/javascript">
+
+var radius = prompt("What is the radius?");
+
+function Circum(radius) {
+  var result = 2 * Math.PI * (radius)
+  return result;
+}
+
+var circumFinal = Circum(radius).toFixed(2);
+
+alert("The circumference is " + circumFinal)
+
+</script>
+
+<!-- What's the temp outside in F -->
+
+<script type="text/javascript">
+
+var temp = prompt("What's the temp outside in F?")
+
+function convert(temp) {
+  var result = (temp - 32) * (5/9)
+  return result;
+}
+
+var celsius = convert(temp).toFixed(0);
+
+alert("In C, that's " + celsius + ".")
+
+</script>
+
+<!-- How tall are you?-->
+
+<script type="text/javascript">
+
+var inches = prompt("How tall are you in inches?")
+
+function convertHeight(inches) {
+  var result = inches * 2.54
+  return result;
+}
+
+var cm = convertHeight(inches).toFixed(0);
+
+alert("In centimeters, that's " + cm + ".")
+
+</script>
