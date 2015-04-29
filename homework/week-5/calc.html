@@ -1,0 +1,86 @@
+<style>
+body { font-size: 20px; font-family: sans-serif; }
+td { width: 100px; text-align: center; }
+.placeholder, button { width: 100%; }
+.placeholder { height: 23px; border: 1px solid #bababa; border-radius: 3px; }
+button { cursor: pointer; border: 1px solid #58c0f5; color: #58c0f5; background-color: white; font: inherit; }
+button { background-color: #58c0f5; color: white; border-radius: 3px; }
+</style>
+
+<table>
+  <tr>
+    <td>
+      <div id="first-operand" class="placeholder" contenteditable></div>
+    </td>
+    <td>
+      <div id="second-operand" class="placeholder" contenteditable></div>
+    </td>
+    <td>
+      =
+    </td>
+    <td>
+      <div id="result" class="placeholder"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button id="add-button" class="inverted-button">+</button>
+    </td>
+    <td>
+      <button id="subtract-button" class="inverted-button">-</button>
+    </td>
+    <td>
+      <button id="multiply-button" class="inverted-button">*</button>
+    </td>
+    <td>
+      <button id="divide-button" class="inverted-button">/</button>
+    </td>
+  </tr>
+</table>
+
+<script>
+
+// Variables
+var firstOperand = document.querySelector("#first-operand");
+
+var secondOperand = document.querySelector("#second-operand");
+
+var result = document.querySelector("#result")
+
+
+// Buttons
+var addButton = document.querySelector("#add-button");
+addButton.addEventListener("click",addClick);
+
+var subtractButton = document.querySelector("#subtract-button");
+subtractButton.addEventListener("click",subtractClick);
+
+var multiplyButton = document.querySelector("#multiply-button");
+multiplyButton.addEventListener("click",multiplyClick);
+
+var divideButton = document.querySelector("#divide-button");
+divideButton.addEventListener("click",divideClick);
+
+// Addition
+function addClick (e) {
+  result.textContent = parseFloat(firstOperand.textContent) + parseFloat(secondOperand.textContent);
+}
+
+// Subtraction
+function subtractClick (e) {
+  result.textContent = parseFloat(firstOperand.textContent) - parseFloat(secondOperand.textContent);
+}
+
+// Multiplication
+function multiplyClick (e) {
+  result.textContent = parseFloat(firstOperand.textContent) * parseFloat(secondOperand.textContent);
+}
+
+// Divison
+function divideClick (e) {
+  result.textContent = parseFloat(firstOperand.textContent) / parseFloat(secondOperand.textContent);
+}
+
+
+
+</script>
