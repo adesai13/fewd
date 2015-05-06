@@ -1,0 +1,71 @@
+<ul>
+  <!-- Movies will go here, see below. -->
+</ul>
+
+<script>
+var favoriteMovies = [
+  {
+    name: 'Cool Runnings',
+    year: 1993,
+    url: 'http://www.imdb.com/title/tt0106611/',
+    ratings: [5, 5, 5, 5, 5, 5, 5, 5]
+  },
+  {
+    name: 'Terminator 2',
+    year: 1991,
+    url: 'http://www.imdb.com/title/tt0103064/',
+    ratings: [5, 4, 3, 5, 4, 5, 4, 5, 5, 5, 3]
+  },
+  {
+    name: 'Interstellar',
+    year: 2014,
+    url: 'http://www.imdb.com/title/tt0816692/',
+    ratings: [5, 3, 5, 5, 1, 2, 4, 5, 5, 2]
+   }
+]
+
+var list = document.querySelector('ul');
+
+for (var i = 0; i < favoriteMovies.length; i++) {
+  var movie = favoriteMovies[i];
+
+  // create list item
+  var listItem = document.createElement('li');
+
+  //set Name & for movie
+  var movieLink = document.createElement("a");
+  movieLink.textContent = movie.name;
+  movieLink.setAttribute("href", movie.url);
+
+  // Sum of ratings
+  var ratingLength = movie.ratings.length;
+  var totalRating = 0
+
+  for (var j = 0; j < movie.ratings.length; j++) {
+    totalRating = totalRating + movie.ratings[j]
+  }
+
+  // Average rating
+  var averageRating = Math.round((totalRating / ratingLength)* 10) / 10;
+
+  // Create span
+  movieInfo = document.createElement("span")
+  movieInfo.textContent = " (" + movie.year + ", " + averageRating + " stars, " + ratingLength + " ratings)"
+
+
+  // create Elements
+  list.appendChild(listItem);
+  listItem.appendChild(movieLink);
+  listItem.appendChild(movieInfo);
+}
+
+
+
+
+// Create a <li> for each movie that looks like this and add it to the list:
+// <li>
+//   <a href="http://www.imdb.com/title/tt0106611/">Cool Runnings</a>
+//   <span>(1993, 5.0 stars, 8 ratings)</span>
+// </li>
+
+</script>
