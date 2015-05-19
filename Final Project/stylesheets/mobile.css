@@ -1,0 +1,18 @@
+header {
+  text-align: center;
+}
+
+header nav {
+  position: static;
+}
+
+header nav li {
+  display: block;
+}
+
+nav {
+  display: block;
+  position: static;
+}
+
+header nav.expen

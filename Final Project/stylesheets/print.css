@@ -1,0 +1,9 @@
+header, footer {
+  display: none
+}
+
+main {
+  box-shadow: none;
+  padding: 0;
+  border: none;
+}
