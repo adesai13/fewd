@@ -27,51 +27,69 @@
       How are you feeling?
     </p>
 
-<table class="table">
-  <tr>
-    <td class="positive">
-      <img src="images/happy.png">
-      <br>
-      Happy</br>
-    </td>
 
-    <td class="negative">
-      <img src="images/sad.png">
-      <br>
-      Sad</br>
-    </td>
-  </tr>
-  <tr>
-    <td class="positive" class="middle">
-      <img src="images/loved.png">
-      <br>
-      Loved</br>
-    </td>
+    <table class="table">
+      <tr>
+        <td class="positive" id="happy">
+          <img src="images/happy.png">
+          <br>
+          Happy</br>
+        </td>
 
-    <td class="negative" class="middle">
-        <img src="images/guilty.png">
-        <br>Guilty</br>
-  </tr>
-  <tr>
-    <td class="positive">
-      <img src="images/inspired.png">
-      <br>
-      Inspired</br>
-    </td>
+        <td class="negative">
+          <img src="images/sad.png">
+          <br>
+          Sad</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="positive" class="middle">
+          <img src="images/loved.png">
+          <br>
+          Loved</br>
+        </td>
 
-    <td class="negative">
-      <img src="images/lonely.png">
-      <br>
-      Lonely</br>
-    </td>
-  </tr>
-</table>
+        <td class="negative" class="middle">
+            <img src="images/guilty.png">
+            <br>Guilty</br>
+      </tr>
+      <tr>
+        <td class="positive">
+          <img src="images/inspired.png">
+          <br>
+          Inspired</br>
+        </td>
 
-  </body>
+        <td class="negative">
+          <img src="images/lonely.png">
+          <br>
+          Lonely</br>
+        </td>
+      </tr>
+    </table>
+
+  <div class ="quotebox">
+
+    <p class="quote">I will prepare and some day my chance will come.</p>
+    <p class="author">Abraham Lincoln</p>
+
+  </div>
+
+</body>
 
   <footer>
     <p>&copy Arjun Desai 2015
    </p>
   </footer>
+
+<script type="text/javascript">
+
+var happy = $("#happy");
+
+happy.on('click', function(e) {
+  alert('Hello')
+})
+
+</script>
 
 </html>

@@ -32,7 +32,7 @@ header{
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   border: 1px solid #C7C7C7;
   border-radius: 9px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -41,6 +41,9 @@ header{
   max-width: 600px;
 
 }
+
+
+/*Emotion Table*/
 
 table {
   background-color: white;
@@ -83,10 +86,35 @@ td:nth-child(1),td:nth-child(2) {
   text-align: center;
 }
 
-footer {
-  color: grey;
-  font-size: 15px;
-  text-align: center;
-  padding-top: 5px;
-  margin-top: 30px;
-}
+/*Quote Section*/
+  .quotebox {
+    background-color: white;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 45px;
+    border: 1px solid #C7C7C7;
+    border-radius: 9px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+  }
+
+  .quote {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+
+  .author {
+    font-size: 18px;
+    font-style: italic;
+  }
+
+/*Footer*/
+
+  footer {
+    color: grey;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 5px;
+  }
