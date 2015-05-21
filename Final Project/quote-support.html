@@ -73,6 +73,10 @@
     <p class="quote">I will prepare and some day my chance will come.</p>
     <p class="author">Abraham Lincoln</p>
 
+    <div class="buttons">
+      <button type="button" name="button" class="goback">Go Back</button>
+      <button type="button" name="button" class="anotherquote">Another Quote?</button>
+    </div>
   </div>
 
 </body>
@@ -84,11 +88,18 @@
 
 <script type="text/javascript">
 
-var happy = $("#happy");
+$("td").click(function() {
+  $(".table").fadeOut(800, function() {
+    $(".quotebox").fadeIn(800);
+  });
+});
 
-happy.on('click', function(e) {
-  alert('Hello')
-})
+$(".goback").click(function() {
+  $(".quotebox").fadeOut(800, function() {
+    $(".table").fadeIn(800);
+  })
+});
+
 
 </script>
 

@@ -88,6 +88,7 @@ td:nth-child(1),td:nth-child(2) {
 
 /*Quote Section*/
   .quotebox {
+    display: none;
     background-color: white;
     padding: 20px;
     margin-left: auto;
@@ -103,11 +104,35 @@ td:nth-child(1),td:nth-child(2) {
   .quote {
     font-size: 20px;
     margin-top: 0px;
+    position: relative;
   }
 
   .author {
     font-size: 18px;
     font-style: italic;
+  }
+
+  .goback, .anotherquote {
+    font-family:'Oxygen';
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 9px;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .buttons {
+    position: relative;
+  }
+
+  .anotherquote {
+    position: absolute;
+    right: 0px;
+  }
+
+  .buttons button:hover {
+    background-color: grey;
+    cursor: pointer;
   }
 
 /*Footer*/
