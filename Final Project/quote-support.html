@@ -73,7 +73,7 @@
 
 
     <div class="emoji">
-      <img src="images/happy.png" alt="" />
+      <img class="emojimage" src="images/happy.png" alt="" />
     </div>
 
     <div class="quotecontainer">
@@ -113,12 +113,33 @@ $(".goback").click(function() {
 
 
 // Another Quote
-// $('anotherQuote').click(replaceHappyQuote);
+
+
 
 // // Emoji Replace
-// $('td.sad').click(function() {
-//   $('img.emoji').attr('src','images/sad.png'))
-// }
+$('td.happy').click(function() {
+  $('.emojimage').attr("src",'images/happy.png')
+});
+
+$('td.loved').click(function() {
+  $('.emojimage').attr("src",'images/loved.png')
+});
+
+$('td.inspired').click(function() {
+  $('.emojimage').attr("src",'images/inspired.png')
+});
+
+$('td.sad').click(function() {
+  $('.emojimage').attr("src",'images/sad.png')
+});
+
+$('td.gulity').click(function() {
+  $('.emojimage').attr("src",'images/gulity.png')
+});
+
+$('td.lonely').click(function() {
+  $('.emojimage').attr("src",'images/lonely.png')
+});
 
 
 // Global Variable of quoteNum
