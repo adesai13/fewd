@@ -152,6 +152,14 @@ td:nth-child(1),td:nth-child(2) {
     cursor: pointer;
   }
 
+  #twitter {
+    width: 30px;
+    height: 24px;
+    display: inline;
+    position: absolute;
+  }
+
+
 /*Footer*/
 
   footer {

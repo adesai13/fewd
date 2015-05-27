@@ -8,6 +8,34 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
+    <!--Facebook  -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!--Twitter -->
+    <script>window.twttr = (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+          if (d.getElementById(id)) return t;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "https://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+
+          t._e = [];
+          t.ready = function(f) {
+            t._e.push(f);
+          };
+
+          return t;
+        }(document, "script", "twitter-wjs"));</script>
+
   </head>
 
   <header>
@@ -83,10 +111,21 @@
 
     <div class="buttons">
       <button type="button" name="button" class="goback">Go Back</button>
+
+      <a
+      class="twitter-share-button"
+      href="https://twitter.com/share"
+      data-text="hello"
+      data-count="none">
+      </a>
+
       <button type="button" name="button" class="anotherquote">Another Quote?</button>
+
     </div>
 
   </div>
+
+
 
 </body>
 
@@ -95,16 +134,20 @@
    </p>
   </footer>
 
+
 <script type="text/javascript">
 
-// Click function
+// Tweet replace
+
+
+// Click function----------------------------------------//
 $("td").click(function() {
   $(".table").fadeOut(600, function() {
     $(".quotebox").fadeIn(600);
   });
 });
 
-// Go back function
+// Go back function--------------------------------------//
 $(".goback").click(function() {
   $(".quotebox").fadeOut(600, function() {
     $(".table").fadeIn(600);
@@ -112,14 +155,12 @@ $(".goback").click(function() {
 });
 
 
-// Another Quote
 
-
-
-// // Emoji Replace
+// -------- Emoji Replace & Replace Quote---------------------//
 $('td.happy').click(function() {
   $('.emojimage').attr("src",'images/happy.png')
   $('.anotherquote').click(replaceHappyQuote);
+  $('a.twitter-share-button').attr("data-text",'Replacement text')
 });
 
 $('td.loved').click(function() {
@@ -210,7 +251,7 @@ var LovedQuotes = [
     author:"John Denver"
   },
   {
-    quote:"Love is everything it's cracked up to be…It really is worth fighting for, being brave for, risking everything for.",
+    quote:"Love is everything it's cracked up to be. It really is worth fighting for, being brave for, risking everything for.",
     author:"Erica Jong"
   },
   {
