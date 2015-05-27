@@ -99,15 +99,15 @@
 
 // Click function
 $("td").click(function() {
-  $(".table").fadeOut(600, function() {
-    $(".quotebox").fadeIn(600);
+  $(".table").fadeOut(800, function() {
+    $(".quotebox").fadeIn(800);
   });
 });
 
 // Go back function
 $(".goback").click(function() {
-  $(".quotebox").fadeOut(600, function() {
-    $(".table").fadeIn(600);
+  $(".quotebox").fadeOut(800, function() {
+    $(".table").fadeIn(800);
   })
 });
 
@@ -119,39 +119,31 @@ $(".goback").click(function() {
 // // Emoji Replace
 $('td.happy').click(function() {
   $('.emojimage').attr("src",'images/happy.png')
-  $('.anotherquote').click(replaceHappyQuote);
 });
 
 $('td.loved').click(function() {
   $('.emojimage').attr("src",'images/loved.png')
-  $('.anotherquote').click(replaceLovedQuote);
 });
 
 $('td.inspired').click(function() {
   $('.emojimage').attr("src",'images/inspired.png')
-  $('.anotherquote').click(replaceInspiredQuote);
 });
 
 $('td.sad').click(function() {
   $('.emojimage').attr("src",'images/sad.png')
-  $('.anotherquote').click(replaceSadQuote);
 });
 
 $('td.guilty').click(function() {
   $('.emojimage').attr("src",'images/guilty.png')
-  $('.anotherquote').click(replaceGuiltyQuote);
 });
 
 $('td.lonely').click(function() {
-  $('.emojimage').attr("src",'images/lonely.png');
-  $('.anotherquote').click(replaceLonelyQuote);
+  $('.emojimage').attr("src",'images/lonely.png')
 });
 
 
 // Global Variable of quoteNum
 var quoteNum = 0;
-
-
 
 // --------------------- Quote Section ----------------------------- //
 
@@ -214,7 +206,7 @@ var LovedQuotes = [
     author:"Erica Jong"
   },
   {
-    quote:"What else is love but understanding and rejoicing in the fact that another person lives, acts, and experiences otherwise than we do?",
+    quote:"What else is love but understanding and rejoicing in the fact that another person lives, acts, and experiences otherwise than we do…?",
     author:"Friedrich Nietzsche"
   }
 ];
