@@ -1,5 +1,5 @@
 
-// Tweet Generator
+// Tweet Generator----------------------------------//
 $('a.tweet').click(function(e) {
   //Browser not to follow that link
   e.preventDefault();
@@ -13,35 +13,16 @@ $('a.tweet').click(function(e) {
 
   //New Twitter Dialogue Page
 
-  window.open('http://twitter.com/share?text=' + title + ' – '+ author + '&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
-});
-
-// Facebook Generator
-$('a.share').click(function(e) {
-  //Browser not to follow that link
-  e.preventDefault();
-
-  //URL of Link
-  var loc = $(this).attr('href');
-
-  //Title + Author of Quote
-  var title  = escape($('p.quote').text())
-  var author = escape($('p.author').text())
-
-  // //New FB Dialogue Page
-  // http://www.facebook.com/sharer/sharer.php?u=[URL]&title=[TITLE]
-  // http://www.facebook.com/sharer/sharer.php?title=""
-  //
-  // window.open('http://twitter.com/share?text=' + title + ' – '+ author + '&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
-});
+        window.open('http://twitter.com/share?text=' + title + ' – '+ author + '&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+      });
 
 
-// Click function----------------------------------------//
-$("td").click(function() {
-  $(".table").fadeOut(600, function() {
-    $(".quotebox").fadeIn(600);
-  });
-});
+      // Click function----------------------------------------//
+      $("td").click(function() {
+        $(".table").fadeOut(600, function() {
+          $(".quotebox").fadeIn(600);
+        });
+      });
 
 // Go back function--------------------------------------//
 $(".goback").click(function() {
