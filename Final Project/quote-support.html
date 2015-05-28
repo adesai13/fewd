@@ -4,6 +4,8 @@
 
     <link rel="stylesheet" href="stylesheets/main.css" media="all">
 
+    <link rel="stylesheet" href="stylesheets/animate.css" media="all">
+
     <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -142,6 +144,17 @@ $(".goback").click(function() {
   })
 });
 
+// Animate Emoji
+$('.emojimage').click(function () {
+  $('.emojimage').addClass("animated");
+  $('.emojimage').toggleClass("jello");
+})
+
+// Animate "How are you Feeling"
+$('.herotext').click(function () {
+  $('.herotext').addClass("animated");
+  $('.herotext').toggleClass("rubberBand");
+})
 
 
 // -------- Emoji Replace & Replace Quote---------------------//

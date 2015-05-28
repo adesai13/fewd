@@ -39,6 +39,7 @@ header{
   font-size: 30px;
   text-align: center;
   max-width: 350px;
+  cursor: pointer;
 
 }
 
@@ -93,6 +94,10 @@ td:nth-child(1),td:nth-child(2) {
       position: absolute;
       right: 5px;
       top: 5px;
+    }
+
+    .emoji img:hover {
+      cursor: pointer;
     }
 
     .emoji p {
