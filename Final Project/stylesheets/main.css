@@ -153,10 +153,11 @@ td:nth-child(1),td:nth-child(2) {
   }
 
   #twitter {
-    width: 30px;
     height: 24px;
+    width: 30px;
     display: inline;
     position: absolute;
+    align-items: center;
   }
 
 

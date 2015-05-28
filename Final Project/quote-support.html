@@ -8,33 +8,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-    <!--Facebook  -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-    <!--Twitter -->
-    <script>window.twttr = (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-          if (d.getElementById(id)) return t;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "https://platform.twitter.com/widgets.js";
-          fjs.parentNode.insertBefore(js, fjs);
-
-          t._e = [];
-          t.ready = function(f) {
-            t._e.push(f);
-          };
-
-          return t;
-        }(document, "script", "twitter-wjs"));</script>
 
   </head>
 
@@ -112,11 +85,9 @@
     <div class="buttons">
       <button type="button" name="button" class="goback">Go Back</button>
 
-      <a
-      class="twitter-share-button"
-      href="https://twitter.com/share"
-      data-text="hello"
-      data-count="none">
+
+      <a class="tweet" title="Quote Support" href="" target="_blank">
+      <img id="twitter" src="images/twitter.png" alt="" />
       </a>
 
       <button type="button" name="button" class="anotherquote">Another Quote?</button>
@@ -137,7 +108,23 @@
 
 <script type="text/javascript">
 
-// Tweet replace
+// Tweet
+// We bind a new event to our link
+$('a.tweet').click(function(e){
+  //We tell our browser not to follow that link
+  e.preventDefault();
+
+  //We get the URL of the link
+  var loc = $(this).attr('href');
+
+  //We get the title of the link
+  // var title  = escape($(this).attr('title'));
+  var title  = escape($('p.quote').text())
+
+  //We trigger a new window with the Twitter dialog, in the middle of the page
+
+  window.open('http://twitter.com/share?url=' + loc + '&text=' + title + '&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+});
 
 
 // Click function----------------------------------------//
@@ -160,7 +147,6 @@ $(".goback").click(function() {
 $('td.happy').click(function() {
   $('.emojimage').attr("src",'images/happy.png')
   $('.anotherquote').click(replaceHappyQuote);
-  $('a.twitter-share-button').attr("data-text",'Replacement text')
 });
 
 $('td.loved').click(function() {
@@ -187,6 +173,7 @@ $('td.lonely').click(function() {
   $('.emojimage').attr("src",'images/lonely.png');
   $('.anotherquote').click(replaceLonelyQuote);
 });
+
 
 
 // Global Variable of quoteNum
